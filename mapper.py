@@ -33,9 +33,13 @@ for line in sys.stdin:
     # strip removes whitespaces and new lines at the beginning and end of the line
     # the result is a tuple with 6 elements
     data = line.strip().split("\t")
-
+	if len(data)<=5:
+		print "warning- less than 6 elements in tuple "
     # store the 6 elements of the tuple in seperate variables
     date, time, item, category, sales, payment = data
+
+
+
 
     # Write the key-value combination to standard output (stdout)
     # Key is the payment, value is the sales     
